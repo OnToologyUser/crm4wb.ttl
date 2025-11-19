@@ -13,33 +13,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix wbbs: <https://wikiba.se/bootstrap#> .
 
-lrmoo: a owl:Ontology ;
-    rdfs:label "LRMoo 1.0 / OWL"@en ;
-    owl:versionIRI <http://cidoc-crm.org/extensions/lrmoo/owl/1.0/> ;
-    owl:versionInfo "LRMoo Ontology 1.0 (May, 2024) including references to CIDOC-CRM 7.1.3"@en .
 
-crm: a owl:Ontology ;
-    rdfs:label "Owl Implementation of CIDOC-CRM 7.1.3 (February 2024)."@en ;
-    rdfs:comment "An OWL DL 1.0 implementation of the CIDOC Conceptual Reference Model."@en ;
-    owl:versionIRI <http://www.cidoc-crm.org/cidoc-crm/owl/7.1.3/> ;
-    owl:versionInfo "CIDOC-CRM 7.1.3 February 2024"@en .
-
-crmarchaeo: a owl:Ontology ;
-    rdfs:label "CRMarchaeo 2.1.1 / OWL"@en ;
-    owl:imports <http://www.cidoc-crm.org/cidoc-crm/owl/7.1.2/>,
-        <http://www.cidoc-crm.org/extensions/crmsci/owl/2.0/> ;
-    owl:versionIRI <http://www.cidoc-crm.org/extensions/crmarchaeo/owl/2.1.1/> ;
-    owl:versionInfo "CRMarchaeo 2.1.1 (April, 2024) including references to CIDOC-CRM 7.1.2 and CRMsci 2.0"@en .
-
-crmdig: a owl:Ontology ;
-    rdfs:label "CRMdig 4.0 (DRAFT) / OWL"@en ;
-    owl:versionInfo "CRMdig 4.0 (DRAFT) (December, 2022) including references to CIDOC-CRM 7.1.1. Current encoding (February, 2024) references Cidoc-CRM 7.1.3."@en .
-
-crmsci: a owl:Ontology ;
-    rdfs:label "CRMsci 2.0 / OWL"@en ;
-    owl:imports <http://www.cidoc-crm.org/cidoc-crm/owl/7.1.2/> ;
-    owl:versionIRI <http://www.cidoc-crm.org/extensions/crmsci/owl/2.0/> ;
-    owl:versionInfo "CRMsci Ontology 2.0 (March, 2023) including references to CIDOC-CRM 7.1.2"@en .
 
 wbbs:P1 a owl:ObjectProperty ;
     rdfs:label "instance of"@en ;
@@ -120,8 +94,8 @@ wbbs:P9 a owl:ObjectProperty ;
         "Wikibase datatype: wikibase-property"@en ;
     wbbs:P6 "P1696" .
 
-<https://wikiba.se/wikibase-crm-mapping#> a owl:Ontology,
-        skos:mappingRelation ;
+crm4wb: a owl:Ontology ;
+    skos:mappingRelation ;
     dcterms:creator "Ismael Olea" ;
     dcterms:title "Wikibase datatypes mapping for CIDOC CRM and extensions" ;
     owl:versionInfo "2025-11-18" .
@@ -942,20 +916,6 @@ In First Order Logic:
     skos:note "Wikibase ID: Q62"@en ;
     skos:prefLabel "Categorical Hypothesis Building"@en ;
     wbbs:P5 crmsci:S8_Categorical_Hypothesis_Building .
-
-wbbs: a owl:Ontology ;
-    dcterms:contributor "Clair Kronk",
-        "David Lindemann",
-        "Ismael Olea",
-        "Tuukka Hastrup" ;
-    dcterms:description "An essential set of entities for new Wikibase instances, mapped with Wikidata and selected by practicalities and common use" ;
-    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dcterms:publisher <http://www.wikidata.org/entity/Q51033881> ;
-    dcterms:rights "CC0 1.0 Universal" ;
-    dcterms:title "The Wikibase bootstrap set" ;
-    vann:preferredNamespacePrefix "wbbs" ;
-    vann:preferredNamespaceUri wbbs: ;
-    owl:versionInfo "2025-10-21" .
 
 lrmoo:R10_is_member_of a owl:ObjectProperty ;
     rdfs:label "R10 is member of"@en ;
