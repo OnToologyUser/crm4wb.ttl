@@ -13,7 +13,10 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix wbbs: <https://wikiba.se/bootstrap#> .
 
-
+crm4wb: a owl:Ontology ;
+    dcterms:creator "Ismael Olea" ;
+    dcterms:title "Wikibase datatypes mapping for CIDOC CRM and extensions" ;
+    owl:versionInfo "2025-11-18" .
 
 wbbs:P1 a owl:ObjectProperty ;
     rdfs:label "instance of"@en ;
@@ -94,11 +97,6 @@ wbbs:P9 a owl:ObjectProperty ;
         "Wikibase datatype: wikibase-property"@en ;
     wbbs:P6 "P1696" .
 
-crm4wb: a owl:Ontology ;
-    skos:mappingRelation ;
-    dcterms:creator "Ismael Olea" ;
-    dcterms:title "Wikibase datatypes mapping for CIDOC CRM and extensions" ;
-    owl:versionInfo "2025-11-18" .
 
 lrmoo:F11_Corporate_Body a owl:Class ;
     rdfs:label "F11 Corporate Body"@en ;
@@ -916,6 +914,7 @@ In First Order Logic:
     skos:note "Wikibase ID: Q62"@en ;
     skos:prefLabel "Categorical Hypothesis Building"@en ;
     wbbs:P5 crmsci:S8_Categorical_Hypothesis_Building .
+
 
 lrmoo:R10_is_member_of a owl:ObjectProperty ;
     rdfs:label "R10 is member of"@en ;
